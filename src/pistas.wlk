@@ -11,6 +11,9 @@ object mainRoom{
 		unaPersona.disminuirEnergia(40)
 		unaPersona.aumentarDiversion(30)
 	}
+	method cantidadPersonasBailando(){
+		return personasBailando.size()
+	}
 }
 
 object panoramaBar{
