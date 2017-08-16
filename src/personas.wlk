@@ -6,6 +6,12 @@ object vonLukaz{
 	
 	method edad() = edad
 	method colorRemera() = colorRemera
+	method disminuirEnergia(unaCantidad){
+		energia -= unaCantidad
+	}
+	method aumentarDiversion(unaCantidad){
+		diversion += unaCantidad
+	}
 }
 
 object bianker{
@@ -16,6 +22,12 @@ object bianker{
 	
 	method edad() = edad
 	method colorRemera() = colorRemera
+	method disminuirEnergia(unaCantidad){
+		energia -= unaCantidad
+	}
+	method aumentarDiversion(unaCantidad){
+		diversion += unaCantidad
+	}
 }
 
 object gonzen{
@@ -26,4 +38,10 @@ object gonzen{
 	
 	method edad() = edad
 	method colorRemera() = colorRemera
+	method disminuirEnergia(unaCantidad){
+		energia -= unaCantidad
+	}
+	method aumentarDiversion(unaCantidad){
+		diversion += unaCantidad
+	}
 }
