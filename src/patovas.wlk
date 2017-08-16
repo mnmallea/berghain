@@ -1,17 +1,17 @@
 object rochensen{
-	method verSiPasa(unaPersona){
+	method dejaPasar(unaPersona){
 		return unaPersona.edad() > 21
 	}
 }
 
 object rodrigsen{
-	method verSiPasa(unaPersona){
+	method dejaPasar(unaPersona){
 		return unaPersona.colorRemera() == "negro"
 	}
 }
 
 object gushtavotruccensen{
-	method verSiPasa(unaPersona){
+	method dejaPasar(unaPersona){
 		return false
 	}
 }

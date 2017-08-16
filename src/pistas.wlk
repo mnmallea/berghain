@@ -14,6 +14,9 @@ object mainRoom{
 	method cantidadPersonasBailando(){
 		return personasBailando.size()
 	}
+	method estaBailando(unaPersona){
+		return personasBailando.contains(unaPersona)
+	}
 }
 
 object panoramaBar{
@@ -29,6 +32,9 @@ object panoramaBar{
 	method bailaPista(){
 		personasBailando.map({persona => djActual.hacerBailar(persona)})
 	}
+	method estaBailando(unaPersona){
+		return personasBailando.contains(unaPersona)
+	}
 
 }
 
@@ -37,5 +43,8 @@ object darkRoom{
 	
 	method agregarPersona(unaPersona){
 		personasBailando.add(unaPersona)
+	}
+	method estaBailando(unaPersona){
+		return personasBailando.contains(unaPersona)
 	}
 }

@@ -11,11 +11,14 @@ object berghain{
 		patovaDeTurno = unPatova
 	}
 	method ingresarPersona(unaPersona){
-		if (patovaDeTurno.verSiPasa(unaPersona)){
+		if (patovaDeTurno.dejaPasar(unaPersona)){
 			personas.add(unaPersona)
 		}
 	}
 	method personasBailandoEn(unaPista){
 		return unaPista.cantidadPersonasBailando()
+	}
+	method estaBailando(unaPersona){
+		return mainRoom.estaBailando(unaPersona) || panoramaBar.estaBailando(unaPersona) || darkRoom.estaBailando(unaPersona)
 	}
 }
