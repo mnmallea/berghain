@@ -4,8 +4,10 @@ object vonLukaz{
 	var colorRemera = "blanco"
 	var edad = 17
 	
+	method diversion() = diversion
 	method edad() = edad
 	method colorRemera() = colorRemera
+	method energia() = energia
 	method energia(nuevaEnergia){
 		energia = nuevaEnergia
 	}
@@ -23,8 +25,11 @@ object bianker{
 	var colorRemera = "negro"
 	var edad = 22
 	
+	method diversion() = diversion
+	method energia() = energia
 	method edad() = edad
 	method colorRemera() = colorRemera
+	
 	method energia(nuevaEnergia){
 		energia = nuevaEnergia
 	}
@@ -42,6 +47,8 @@ object gonzen{
 	var colorRemera = "negro"
 	var edad = 33
 	
+	method diversion() = diversion
+	method energia() = energia
 	method edad() = edad
 	method colorRemera() = colorRemera
 	method energia(nuevaEnergia){

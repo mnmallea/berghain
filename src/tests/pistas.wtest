@@ -1,0 +1,16 @@
+import pistas.*
+import berghain.*
+import personas.*
+
+describe "tests para las pistas"{
+	test "vonLukaz esta en el main room, bailan y debe quedar con energia 110"{
+		mainRoom.agregarPersona(vonLukaz)
+		mainRoom.bailaPista()
+		assert.equals(110, vonLukaz.energia())
+	}
+	test "vonLukaz esta en el main room, bailan y debe quedar con diversion=100"{
+		mainRoom.agregarPersona(vonLukaz)
+		mainRoom.bailaPista()
+		assert.equals(100, vonLukaz.diversion())
+	}
+}
