@@ -6,6 +6,26 @@ describe "tets para patovas"{
 	test "rochensen no debe dejar pasar a lukaz porque es menor de 21"{
 		berghain.patovaDeTurno(rochensen)
 		berghain.ingresarPersona(vonLukaz)
-		assert.notThat(berghain.personas().contains(vonLukaz))
+		assert.notThat(berghain.estaAdentro(vonLukaz))
+	}
+	test "rochensen deja pasar a bianker porque tiene 22"{
+		berghain.patovaDeTurno(rochensen)
+		berghain.ingresarPersona(bianker)
+		assert.that(berghain.estaAdentro(bianker))
+	}
+	test "gustavo truccensen no deja pasar a gonzen porque no deja pasar a nadie"{
+		berghain.patovaDeTurno(gushtavotruccensen)
+		berghain.ingresarPersona(gonzen)
+		assert.notThat(berghain.estaAdentro(gonzen))
+	}
+	test "rodrigsen deja pasar a bianker porque tiene remera negra"{
+		berghain.patovaDeTurno(rodrigsen)
+		berghain.ingresarPersona(bianker)
+		assert.that(berghain.estaAdentro(bianker))
+	}
+	test "rodrigsen no debe dejar pasar a vonLukaz porque no tiene remera negra"{
+		berghain.patovaDeTurno(rodrigsen)
+		berghain.ingresarPersona(vonLukaz)
+		assert.notThat(berghain.estaAdentro(vonLukaz))
 	}
 }
