@@ -7,6 +7,9 @@ object berghain{
 	var personas = #{}
 	var patovaDeTurno
 	
+	method estaAdentro(unaPersona){
+		return personas.contains(unaPersona)
+	}
 	method patovaDeTurno(unPatova){
 		patovaDeTurno = unPatova
 	}

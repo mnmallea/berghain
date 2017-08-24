@@ -1,6 +1,11 @@
+import personas.*
+import patovas.*
+import berghain.*
 
-test "testX" {
-
-	assert.that(true)
-
+describe "tets para patovas"{
+	test "rochensen no debe dejar pasar a lukaz porque es menor de 21"{
+		berghain.patovaDeTurno(rochensen)
+		berghain.ingresarPersona(vonLukaz)
+		assert.notThat(berghain.personas().contains(vonLukaz))
+	}
 }
