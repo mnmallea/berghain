@@ -1,0 +1,18 @@
+import pistas.*
+import berghain.*
+import personas.*
+
+describe "tests para la cantidad de personas que hay en las pistas"{
+	test "no hay nadie en panorama bar"{
+		assert.equals(0, berghain.cantidadDePersonasBailandoEn(panoramaBar))
+	}
+	test "gonzen y bianker bailan en el mainRoom: debe haber 2 personas bailando en el main room"{
+		mainRoom.agregarPersona(gonzen)
+		mainRoom.agregarPersona(bianker)
+		assert.equals(2,berghain.cantidadDePersonasBailandoEn(mainRoom))
+	}
+	test "gonzen esta bailando en el dark room, entonces estaBailandoEnUnaPista es verdadero"{
+		darkRoom.agregarPersona(gonzen)
+		assert.that(berghain.estaBailando(gonzen))
+	}
+}

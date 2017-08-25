@@ -11,7 +11,7 @@ object mainRoom{
 		unaPersona.disminuirEnergia(40)
 		unaPersona.aumentarDiversion(30)
 	}
-	method cantidadPersonasBailando(){
+	method cantidadDePersonasBailando(){
 		return personasBailando.size()
 	}
 	method estaBailando(unaPersona){
@@ -35,6 +35,9 @@ object panoramaBar{
 	method estaBailando(unaPersona){
 		return personasBailando.contains(unaPersona)
 	}
+	method cantidadDePersonasBailando(){
+		return personasBailando.size()
+	}
 
 }
 
@@ -46,5 +49,8 @@ object darkRoom{
 	}
 	method estaBailando(unaPersona){
 		return personasBailando.contains(unaPersona)
+	}
+	method cantidadDePersonasBailando(){
+		return personasBailando.size()
 	}
 }

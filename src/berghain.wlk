@@ -18,8 +18,8 @@ object berghain{
 			personas.add(unaPersona)
 		}
 	}
-	method personasBailandoEn(unaPista){
-		return unaPista.cantidadPersonasBailando()
+	method cantidadDePersonasBailandoEn(unaPista){
+		return unaPista.cantidadDePersonasBailando()
 	}
 	method estaBailando(unaPersona){
 		return mainRoom.estaBailando(unaPersona) || panoramaBar.estaBailando(unaPersona) || darkRoom.estaBailando(unaPersona)
