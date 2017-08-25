@@ -1,6 +1,7 @@
 import pistas.*
 import berghain.*
 import personas.*
+import DJs.*
 
 describe "tests para las pistas"{
 	test "vonLukaz esta en el main room, bailan y debe quedar con energia 110"{
@@ -12,5 +13,35 @@ describe "tests para las pistas"{
 		mainRoom.agregarPersona(vonLukaz)
 		mainRoom.bailaPista()
 		assert.equals(100, vonLukaz.diversion())
+	}
+	test "bianker baila en panorama bar, el DJ actual es dixon, queda con energia en 80"{
+		panoramaBar.agregarPersona(bianker)
+		panoramaBar.djActual(dixon)
+		panoramaBar.bailaPista()
+		assert.equals(80, bianker.energia())
+	}
+	test "bianker baila en panorama bar, el DJ actual es dixon, queda con diversion en 200"{
+		panoramaBar.agregarPersona(bianker)
+		panoramaBar.djActual(dixon)
+		panoramaBar.bailaPista()
+		assert.equals(200, bianker.diversion())
+	}
+	test "gonzen baila en panorama bar, el Dj es marcelDettman, queda con energia 0"{
+		panoramaBar.agregarPersona(gonzen)
+		panoramaBar.djActual(marcelDettmann)
+		panoramaBar.bailaPista()
+		assert.equals(0, gonzen.energia())
+	}
+	test "gonzen baila en panorama bar, el Dj es marcelDettman, queda con diversion=1015"{
+		panoramaBar.agregarPersona(gonzen)
+		panoramaBar.djActual(marcelDettmann)
+		panoramaBar.bailaPista()
+		assert.equals(1015, gonzen.diversion())
+	}
+	test "vonLukaz baila en panorama bar, el DJ es tommyMunoz, queda con energia 70"{
+		panoramaBar.agregarPersona(vonLukaz)
+		panoramaBar.djActual(tommyMunioz)
+		panoramaBar.bailaPista()
+		assert.equals(70, vonLukaz.energia())
 	}
 }
