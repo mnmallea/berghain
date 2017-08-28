@@ -5,7 +5,7 @@ object mainRoom{
 		personasBailando.add(unaPersona)
 	}
 	method bailaPista(){
-		personasBailando.map({persona => self.hacerBailar(persona)})
+		personasBailando.forEach({persona => self.hacerBailar(persona)})
 	}
 	method hacerBailar(unaPersona){
 		unaPersona.disminuirEnergia(40)
@@ -30,7 +30,7 @@ object panoramaBar{
 		djActual = unDJ
 	}
 	method bailaPista(){
-		personasBailando.map({persona => djActual.hacerBailar(persona)})
+		personasBailando.forEach({persona => djActual.hacerBailar(persona)})
 	}
 	method estaBailando(unaPersona){
 		return personasBailando.contains(unaPersona)
